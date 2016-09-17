@@ -1,5 +1,8 @@
 QHttpHeader for Qt 5
+--------------------
 
+REASON
+------
 Starting Qt 5 all QHttp and QHttpHeader classes were deprecated. The QHttp class
 deprecation is fully understandable and reasonable. But QHttpHeader classes deprecation
 is completely unacceptable for me.
@@ -10,15 +13,27 @@ This is a description provided by Digia (http://doc.qt.io/qt-5/sourcebreaks.html
 
 Hey, guys, it sounds like "steering will is removed from your car. Use car instead."
 
+DESCRITION
+----------
 So this is very fast (10 minutes) and dirty QHttpHeader classes porting to Qt5. The follow
 classes are included:
     QHttpHeader
     QHttpRequestHeader
     QHttpResponseHeader
 
-Just
+INSTALLATION
+------------
     qmake
     make
     make install
-and the library is ready for use. Use "#include <http_headers.h>" instead of  "#include <QHttpHeaders>"
+Note that default destination is /usr/local/lib and /usr/local/include
+Change DEST variable in http_headers.pro in order to change that.
+
+USAGE
+-----
+Use
+    #include <http_headers.h>
+instead of
+    #include <QHttpHeaders>
+
 All other usage is identical to Qt 4
