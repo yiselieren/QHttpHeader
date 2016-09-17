@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ex() { echo $@; $@; }
+
+if [ -r Makefile ]; then
+    ex make clean
+fi
+ex rm -f Makefile libhttp_headers.so*
